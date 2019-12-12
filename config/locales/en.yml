@@ -32,3 +32,7 @@
 en:
   app_title: CS Chat
   app_description: A place to chat in lectures.
+  home:
+    contact:
+      title: Contact Us
+      contact_us: Complete the following form to get in touch!
