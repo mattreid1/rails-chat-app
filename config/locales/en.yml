@@ -36,3 +36,15 @@ en:
     contact:
       title: Contact Us
       contact_us: Complete the following form to get in touch!
+      name: "Name:" # Need quotes to handle ":" character
+      enter_name: Enter your name
+      email: "Email:"
+      enter_email: Enter your email address
+      telephone: "Telephone:"
+      enter_telephone: Enter your telephone number
+      message: "Message:"
+      enter_message: What do you want to say?
+      submit: Contact us
+    request_contact:
+      no_email: You must supply an email address
+      email_sent: Thank you! We've recivied your message!
