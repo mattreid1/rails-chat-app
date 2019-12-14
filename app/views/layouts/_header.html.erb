@@ -1,13 +1,23 @@
 <nav class="navbar navbar-light" style="background-color:#e4e4e4;">
 	<a class="navbar-brand" href="/"><%= t("app_title") %></a>
 	<ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+			<a class="nav-link" href="/chatroom">Chatroom</a>
+		</li>
 	</ul>
-	<ul class="navbar-nav">
+	<span class="navbar-text">
 		<% if signed_in? %>
-			<% # Signs out via DELETE request to '/sign_out' %>
-			<%= button_to t("sign_out"), sign_out_path, method: :delete %>
-		<% else %>
-			<%= button_to t("sign_in"), sign_in_path, method: :get %>
+			<%= t("greetings") %>, <%= current_user.email %>
 		<% end %>
+    </span>
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<% if signed_in? %>
+				<% # Signs out via DELETE request to '/sign_out' %>
+				<%= button_to t("sign_out"), sign_out_path, method: :delete %>
+			<% else %>
+				<%= button_to t("sign_in"), sign_in_path, method: :get %>
+			<% end %>
+		</li>
 	</ul>
 </nav>
