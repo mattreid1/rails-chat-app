@@ -52,3 +52,6 @@ en:
     request_contact:
       no_email: You must supply an email address
       email_sent: Thank you! We've recivied your message!
+  chatroom:
+    index:
+      title: General Room
