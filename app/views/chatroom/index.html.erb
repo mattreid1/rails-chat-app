@@ -1,6 +1,10 @@
 <h1 class="title"><%= t(".title") %></h1>
 
-<%= form_with url: '#', html: {id: 'msg_new', class: "text-center"} do |f| %>
+<%= form_with url: '#', html: {id: 'msg_new'} do |f| %>
   <%= f.text_field :attr, placeholder: "Message", id: 'msg_content', :autocomplete => :off %>
   <%= f.submit "Send" %>
 <% end %>
+
+<div id="messages">
+  <%= render @messages %>
+</div>
