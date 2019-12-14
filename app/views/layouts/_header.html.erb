@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light" style="background-color:#e4e4e4;">
+	<a class="navbar-brand" href="/"><%= t("app_title") %></a>
+	<ul class="navbar-nav mr-auto">
+	</ul>
+	<ul class="navbar-nav">
+		<% if signed_in? %>
+			<% # Signs out via DELETE request to '/sign_out' %>
+			<%= button_to t("sign_out"), sign_out_path, method: :delete %>
+		<% else %>
+			<%= button_to t("sign_in"), sign_in_path, method: :get %>
+		<% end %>
+	</ul>
+</nav>

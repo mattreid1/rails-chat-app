@@ -63,9 +63,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # No HAML rails as I'll be using embedded Ruby
 #gem 'haml-rails'
-gem 'bootstrap-sass', '~> 3.3.6'
 gem 'modernizr-rails'
 
 # Clearance is simpler than Devise and so I chose to use that instead
 gem 'clearance'
 gem 'jquery-rails'
+gem 'bootstrap', '~> 4.4.1'

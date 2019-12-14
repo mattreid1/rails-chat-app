@@ -14,7 +14,6 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 $font: "Roboto", sans-serif;;
@@ -23,10 +22,13 @@ $color: #ffffff;
 body {
   font-family: $font;
   background-color: $color;
-  margin: 8px;
-  padding: 8px;
 }
 
 h1 {
   text-transform: uppercase;
+}
+
+.content {
+	margin: 8px;
+	padding: 8px;
 }
