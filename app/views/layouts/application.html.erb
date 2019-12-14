@@ -15,9 +15,20 @@
   </head>
 
   <body>
-	<% flash.each do |key, value| %>
-	<%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>
+  	<% if signed_in? %>
+		<%= t("greetings") %>, <%= current_user.email %>.
+
+		<% # Signs out via DELETE request to '/sign_out' %>
+		<%= link_to t("sign_out"), sign_out_path, method: :delete %>
+	<% else %>
+		<%= t("signed_out_message") %>, <%= link_to t("sign_in"), sign_in_path %>
 	<% end %>
+	<hr/>
+
+	<% flash.each do |key, value| %>
+		<%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>
+	<% end %>
+
     <%= yield %>
   </body>
 </html>
