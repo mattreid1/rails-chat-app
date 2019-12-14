@@ -3,26 +3,27 @@
   <head>
     <title><%= t("app_title") %></title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-	
-	<script src="/assets/jquery.js" type="text/javascript"></script>
+		<%= csp_meta_tag %>
+		
+		<script src="/assets/jquery.js" type="text/javascript"></script>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-	<%= javascript_include_tag 'modernizr' %>
+		<%= action_cable_meta_tag %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'modernizr' %>
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   </head>
 
   <body>
-	<%= render "layouts/header" %>
-	
-	<div class="content">
-		<% flash.each do |key, value| %>
-			<%= content_tag :div, content_tag(:p, value), style: "color:red;font-weight:bold;", id: "#{key}" unless value.blank? %>
-		<% end %>
+		<%= render "layouts/header" %>
+		
+		<div class="content">
+			<% flash.each do |key, value| %>
+				<%= content_tag :div, content_tag(:p, value), style: "color:red;font-weight:bold;", id: "#{key}" unless value.blank? %>
+			<% end %>
 
-		<%= yield %>
-	</div>
+			<%= yield %>
+		</div>
   </body>
 </html>
