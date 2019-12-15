@@ -60,4 +60,4 @@ en:
     index:
       title: Posts
     form:
-      signed_out_message: Please sign in for your posts to be attributed. See README.md for logins.
+      signed_out_message: Please sign in for your posts to be attributed, otherwise they will be Anonymous. See README.md for logins.
