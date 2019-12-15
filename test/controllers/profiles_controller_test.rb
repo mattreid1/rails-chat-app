@@ -1,8 +1,14 @@
 require 'test_helper'
+require "clearance/test_unit"
 
 class ProfilesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @profile = profiles(:one)
+    User.create!(
+      email: "test@test.com",
+      password: "test"
+    )
+
+    @profile = Profile.first
   end
 
   test "should get index" do
@@ -10,17 +16,16 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_profile_url
-    assert_response :success
-  end
-
   test "should create profile" do
-    assert_difference('Profile.count') do
-      post profiles_url, params: { profile: { admin: @profile.admin, birthday: @profile.birthday, name: @profile.name, student: @profile.student, user_id: @profile.user_id } }
-    end
+    email = "test2@test.com"
 
-    assert_redirected_to profile_url(Profile.last)
+    # Profile created whenever a user is
+	  user = User.create!(
+      email: email,
+      password: "test"
+    )
+
+    assert_equal(email, Profile.find_by(user: user).user.email)
   end
 
   test "should show profile" do

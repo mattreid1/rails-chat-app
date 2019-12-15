@@ -12,11 +12,6 @@ class ProfilesController < ApplicationController
   def show
   end
 
-  # GET /profiles/new
-  def new
-    @profile = Profile.new
-  end
-
   # GET /profiles/1/edit
   def edit
   end

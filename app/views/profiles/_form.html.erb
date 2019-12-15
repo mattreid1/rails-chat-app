@@ -17,7 +17,7 @@
   </div>
 
   <% # If the user is an admin, they can make others admins %>
-  <% if Profile.find_by(user: current_user).admin %>
+  <% if signed_in? && Profile.find_by(user: current_user).admin %>
     <div class="field">
       <%= form.label :admin %>
       <%= form.check_box :admin %>
