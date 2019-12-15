@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= t("app_title") %></title>
-    <%= csrf_meta_tags %>
+    	<%= csrf_meta_tags %>
 		<%= csp_meta_tag %>
 		
 		<script src="/assets/jquery.js" type="text/javascript"></script>
@@ -20,7 +20,7 @@
 		
 		<div class="content">
 			<% flash.each do |key, value| %>
-				<%= content_tag :div, content_tag(:p, value), style: "color:red;font-weight:bold;", id: "#{key}" unless value.blank? %>
+				<%= content_tag :div, content_tag(:p, value), style: "color:blue;font-weight:bold;", id: "#{key}" unless value.blank? %>
 			<% end %>
 
 			<%= yield %>

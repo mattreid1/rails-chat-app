@@ -1,5 +1,5 @@
 <% if !signed_in? %>
-	<div style="color:red; id="alert"><p>Please sign in to post messages and to get live updates. See README.md for logins.</p></div>
+	<div style="color:red; id="alert"><p><%= t(".signed_out_message") %></p></div>
 <% end %>
 
 <h1 class="title"><%= t(".title") %></h1>

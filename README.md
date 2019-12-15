@@ -1,4 +1,5 @@
 # README
+*[GitHub repo](https://github.com/mattreid1/rails-chat-app)*
 
 ## Setup
 Run  `bundle install` to download everything.
