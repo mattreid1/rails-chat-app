@@ -1,3 +1,7 @@
+<% if !signed_in? %>
+	<div style="color:red; id="alert"><p>Please sign in to post messages and to get live updates. See README.md for logins.</p></div>
+<% end %>
+
 <h1 class="title"><%= t(".title") %></h1>
 
 <%= form_with url: '#', html: {id: 'msg_new'} do |f| %>

@@ -1,6 +1,4 @@
 class ChatroomController < ApplicationController
-	before_action :require_login
-
 	def index
 		# Only get messages to nil, the global chatroom
 		@messages = Message.where(to_id: nil).order(created_at: :desc)

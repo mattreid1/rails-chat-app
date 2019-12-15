@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+Run  `bundle install` to download everything.
 
-Things you may want to cover:
+Then run `rake db:setup` to setup the database.
 
-* Ruby version
+Then run `rails s` to start the web server and websocket server on port 3000.
 
-* System dependencies
+## Usage
 
-* Configuration
+Please go to [`http://localhost:3000/`](http://localhost:3000/) to see the site.
 
-* Database creation
+## Account Logins
 
-* Database initialization
+|Email  |Password|
+|-------|-----------|
+|test0@test.com|test|
+|test1@test.com|test|
+|test2@test.com|test|
+|test3@test.com|test|
+|test4@test.com|test|
 
-* How to run the test suite
+These accounts are set up in the `rake db:setup` command as they are in `db/seeds.rb`.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+(Yes, the password is `test` for all the accounts for simplicity)
