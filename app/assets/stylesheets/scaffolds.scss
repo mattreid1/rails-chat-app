@@ -69,3 +69,9 @@ div {
 label {
   display: block;
 }
+
+.show-table * {
+	tr td {
+		padding-right: 40px;
+	}
+}

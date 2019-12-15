@@ -1,5 +1,15 @@
+<% profile = Profile.find_by(user: message.user) %>
+
+<% if profile.admin %>
+	<% userClass = "user-admin" %>
+<% elsif profile.student %>
+	<% userClass = "user-student" %>
+<% else %>
+	<% userClass = "user-standard" %>
+<% end %>
+
 <div class="message">
-	<strong><%= message.user.email %></strong>:
+	<strong><a class="<%= userClass %>" href="/profiles/<%= profile.id %>"><%= profile.name %></a></strong>:
 	<%= message.content %>
 	<br>
 	<small>at <%= l(message.created_at, format: :short) %></small>

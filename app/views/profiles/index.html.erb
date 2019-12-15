@@ -1,13 +1,13 @@
 <h1>Profiles</h1>
 
-<table>
+<table class="show-table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Admin</th>
       <th>Birthday</th>
       <th>Student</th>
-      <th>User</th>
+      <th>Email</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
     <% @profiles.each do |profile| %>
       <tr>
         <td><%= profile.name %></td>
-        <td><%= profile.admin %></td>
-        <td><%= profile.birthday %></td>
-        <td><%= profile.student %></td>
-        <td><%= profile.user %></td>
+        <td><%= profile.admin ? 'Yes' : 'No' %></td>
+        <td><%= profile.birthday || 'Unknown' %></td>
+        <td><%= profile.student ? 'Yes' : 'No' %></td>
+        <td><%= profile.user.email %></td>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,5 +29,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Profile', new_profile_path %>

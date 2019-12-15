@@ -16,10 +16,13 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :admin %>
-    <%= form.check_box :admin %>
-  </div>
+  <% # If the user is an admin, they can make others admins %>
+  <% if Profile.find_by(user: current_user).admin %>
+    <div class="field">
+      <%= form.label :admin %>
+      <%= form.check_box :admin %>
+    </div>
+  <% end%>
 
   <div class="field">
     <%= form.label :birthday %>
@@ -29,11 +32,6 @@
   <div class="field">
     <%= form.label :student %>
     <%= form.check_box :student %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
   </div>
 
   <div class="actions">
