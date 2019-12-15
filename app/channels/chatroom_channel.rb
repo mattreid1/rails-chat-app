@@ -13,6 +13,6 @@ class ChatroomChannel < ApplicationCable::Channel
 	# Creates new Message model to be saved to database
 	def rx_message(data)
 		# Get the current user from connection.rb and then create the Message
-		current_user.messages.create(content: data['message'])
+		current_user.messages.create(content: data['message'], to_id: nil) # Nil means the global chatroom
 	end
 end  
