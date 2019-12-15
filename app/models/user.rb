@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
 
   def create_profile
-    Profile.create(:name => self.email, :user => self)
+    Profile.create(:name => self.email.partition("@").first, :user => self)
   end
 end

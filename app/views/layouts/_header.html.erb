@@ -18,7 +18,7 @@
 		<ul class="nav">
 			<span class="navbar-text">
 				<% if signed_in? %>
-					<%= t("greetings") %>, <%= current_user.email %>
+					<%= t("greetings") %>, <a href="/me"><%= current_user.email %></a>
 				<% end %>
 			</span>
 			<li class="nav-item">

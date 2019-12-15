@@ -1,8 +1,6 @@
-<p>
-  <strong>ID:</strong>
-  <%= @profile.user.id %>
-</p>
-
+<h1 class="title"><%= t(".your_details") %></h1>
+<p><%= t(".assurance") %></p>
+<% puts @profile %>
 <p>
   <strong>Name:</strong>
   <%= @profile.name %>
@@ -21,6 +19,16 @@
 <p>
   <strong>Student:</strong>
   <%= @profile.student ? 'Yes' : 'No' %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.user.email %>
+</p>
+
+<p>
+  <strong>Joined:</strong>
+  <%= @profile.user.created_at %>
 </p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |

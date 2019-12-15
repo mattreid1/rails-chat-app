@@ -65,3 +65,6 @@ en:
     index:
       title: Profiles
       creation_info: Profiles can only be made when a new User is made. So to create a new profile, please <a href='/sign_up'>Sign Up</a>.
+    me:
+      your_details: Your (Private) Details
+      assurance: Your email address and join time will not be disclosed publicly or to any user.

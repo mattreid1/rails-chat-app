@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :require_login, only: [:me]
 
   # GET /profiles
   # GET /profiles.json
@@ -54,6 +55,12 @@ class ProfilesController < ApplicationController
       format.html { redirect_to profiles_url, notice: 'Profile was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  # GET /me
+  def me
+    # Get the first and only record from the scope
+    @profile = Profile.profile_info(current_user).first
   end
 
   private
