@@ -1,4 +1,6 @@
-<h1>Profiles</h1>
+<div style="color:red; id="alert"><p><%= raw(t(".creation_info")) %></p></div>
+
+<h1 class="title"><%= t(".title") %></h1>
 
 <table class="show-table">
   <thead>
@@ -22,7 +24,7 @@
         <td><%= profile.user.email %></td>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete User', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

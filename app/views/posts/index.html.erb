@@ -1,6 +1,16 @@
+<%
+	def trimText(text, length)
+		if text.length > length
+			return text.first(length) + "..."
+		else
+			return text
+		end
+	end
+%>
+
 <h1 class="title"><%= t(".title") %></h1>
 
-<table>
+<table class="show-table">
   <thead>
     <tr>
       <th>Title</th>
@@ -13,8 +23,8 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
+        <td><%= trimText(post.title, 25) %></td>
+        <td><%= trimText(post.content, 150) %></td>
         <td>
           <% if defined?(post.user.email) %>
             <%= post.user.email %>

@@ -61,3 +61,7 @@ en:
       title: Posts
     form:
       signed_out_message: Please sign in for your posts to be attributed, otherwise they will be Anonymous. See README.md for logins.
+  profiles:
+    index:
+      title: Profiles
+      creation_info: Profiles can only be made when a new User is made. So to create a new profile, please <a href='/sign_up'>Sign Up</a>.
