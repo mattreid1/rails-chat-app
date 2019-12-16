@@ -2,7 +2,7 @@
 *[GitHub repo](https://github.com/mattreid1/rails-chat-app)*
 
 ## Setup
-Run  `bundle install` to download everything.
+Run `bundle install` to download everything. If that doesn't work, run `bundle install --path vendor/bundle`.
 
 Then run `rake db:setup` to setup the database.
 
