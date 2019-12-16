@@ -2,8 +2,9 @@ class Message < ApplicationRecord
 	# Each Message belongs to a user
 	belongs_to :user
 
-	# Require message content to be present
+	# Require message content and user ID to be present
 	validates :content, presence: true
+	validates :user_id, presence: true
 
 	# Once message has been saved, broadcast it
 	after_create_commit :broadcast_message
