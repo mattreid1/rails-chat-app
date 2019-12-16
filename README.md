@@ -26,4 +26,4 @@ Please go to [`http://localhost:3000/`](http://localhost:3000/) to see the site.
 
 These accounts are set up in the `rake db:setup` command as they are in `db/seeds.rb`.
 
-(Yes, the password is `test` for all the accounts for simplicity)
+(Yes, the password is `test` for all the accounts for simplicity in testing)
