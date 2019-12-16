@@ -36,6 +36,7 @@ en:
   sign_in: Sign In
   sign_out: Sign Out
   signed_out_message: You are currently signed out
+  footer: University of Surrey COM2025 Coursework
   home:
     contact:
       title: Contact Us

@@ -1,5 +1,6 @@
 <footer class="footer">
 	<div class="container">
-		<span class="text-muted">&copy; <a href="mailto:mr00846@surrey.ac.uk">Matthew Reid</a> 2019 &mdash; University of Surrey COM2025 Coursework</span>
+		<% # My name doesn't change over langauges so it's the same %>
+		<span class="text-muted">&copy; <a href="mailto:mr00846@surrey.ac.uk">Matthew Reid</a> <%= Time.current.year %> &mdash; <%= t("footer") %></span>
 	</div>
 </footer>
