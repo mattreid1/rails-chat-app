@@ -2,8 +2,8 @@
 
 one:
   user: one
-  content: MyText
+  content: A message from a user
 
 two:
   user: two
-  content: MyText
+  content: Another message from a user
