@@ -9,7 +9,7 @@ Setup
 ---------------------------------------
 Run "bundle install" to download everything. If that doesn't work, run "bundle install --path vendor/bundle".
 
-Then run rake "db:setup" to setup the database.
+Then run "rake db:setup" to setup the database.
 
 Then run "rails s" to start the web server and websocket server on port 3000.
 
