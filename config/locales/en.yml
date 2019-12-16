@@ -38,6 +38,8 @@ en:
   signed_out_message: You are currently signed out
   footer: University of Surrey COM2025 Coursework
   home:
+    home:
+      reminder: This is a very abstracted view of how the Chat Room architecture works.
     contact:
       title: Contact Us
       contact_us: Complete the following form to get in touch!

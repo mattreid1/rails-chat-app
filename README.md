@@ -1,6 +1,8 @@
 # README
 *[GitHub repo](https://github.com/mattreid1/rails-chat-app)*
 
+All images used are public domain.
+
 ## Setup
 Run `bundle install` to download everything. If that doesn't work, run `bundle install --path vendor/bundle`.
 
